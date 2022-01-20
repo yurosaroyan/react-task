@@ -1,0 +1,54 @@
+@import "../colors";
+.d_flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn{
+  width: 90px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100vh;
+  flex-direction: column;
+  row-gap: 30px;
+  .btn_block{
+    column-gap: 30px;
+    button{
+      background-color: $white;
+      color: $black;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      &:active{
+        color: $white;
+        background-color: $blue;
+      }
+    }
+  }
+  .content{
+    width: 100%;
+    height: 500px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    .lef_side{
+      flex-direction: column;
+      row-gap: 35px;
+      input{
+        width: 200px;
+        height: 30px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        border:1px solid $gray;
+      }
+      .btn{
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}
