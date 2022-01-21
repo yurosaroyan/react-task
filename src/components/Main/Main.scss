@@ -18,23 +18,32 @@
   height: 100vh;
   flex-direction: column;
   row-gap: 30px;
+
   .btn_block{
     column-gap: 30px;
     button{
       background-color: $white;
       color: $black;
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-      &:active{
-        color: $white;
-        background-color: $blue;
-      }
+    }
+    .active{
+      color: $white;
+      background-color: $blue;
     }
   }
   .content{
     width: 100%;
-    height: 500px;
+    height: 350px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
+    column-gap: 50px;
+    @media screen and (max-width: 1024px) {
+      width: 50%;
+      height: 500px;
+      min-width: 414px;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+    }
     .lef_side{
       flex-direction: column;
       row-gap: 35px;
@@ -44,6 +53,12 @@
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         border:1px solid $gray;
+        &:focus{
+          outline: 1px solid $blue;
+        }
+      }
+      .input_active{
+        color: $green;
       }
       .btn{
         background-color: $blue;
